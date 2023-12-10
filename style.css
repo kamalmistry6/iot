@@ -88,7 +88,9 @@ li a:hover {
 li a::before{
   
 }
-
+img{
+  height: 400px;
+}
 
 
 @media (max-width: 765px) {
@@ -102,5 +104,14 @@ li a::before{
   .main {
     grid-template-columns: repeat(1, 1fr);
     margin: 50px 50px;
+  }
+  img{
+    height: 220px;
+  }
+}
+@media (max-width: 480px) {
+
+  img{
+    height: 190px;
   }
 }
