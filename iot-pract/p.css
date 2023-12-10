@@ -1,0 +1,138 @@
+/* Google Font CDN Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: #fdfcfc;
+}
+h1{
+  text-align: center;
+  margin: 30px;
+  font-size: 40px;
+  font-weight: 500;
+  color: #265df2;
+  border-top: 2px solid #265df2;
+  border-bottom: 2px solid #265df2;
+  background: #e7edfe;
+}
+.btn {
+  position: relative;
+  top: 0px;
+  left: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e7edfe;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 2px solid #265df2;
+  
+}
+
+.btn a {
+  font-size: 30px;
+  text-align: center;
+}
+.text-boxes {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+  margin-bottom: 60px;
+}
+.text-boxes .text-box {
+  height: 380px;
+  max-width: 660px;
+  width: 100%;
+  margin: 55px 0;
+}
+.text-boxes .text-box .topic {
+  font-size: 18px;
+  font-weight: 600;
+  color: #265df2;
+  margin: 4px;
+}
+.text-boxes .text-box textarea {
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  font-size: 15px;
+  font-weight: 400;
+  outline: none;
+  border: 1px solid #265df2;
+  border-radius: 8px;
+  background: #e7edfe;
+}
+.text-box textarea::-webkit-scrollbar {
+  display: none;
+}
+.text-boxes .text-box button {
+  height: 45px;
+  width: 155px;
+  color: #fff;
+  background: #265df2;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 400;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.text-boxes .text-box button:hover {
+  background: #0e4bf1;
+}
+
+#customers {
+  border-collapse: collapse;
+  /* width: 800px; */
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+#customers td,
+#customers th {
+  border: 1px solid #000;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #ddd;
+  color: black;
+  width: 200px;
+}
+#customers td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+
+  }
+
+@media (max-width: 400px) {
+  .text-boxes .text-box button {
+    width: 100%;
+  }
+}
