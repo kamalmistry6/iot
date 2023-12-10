@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Practical - 5</title>
+    <link rel="stylesheet" href="p.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <h1>Practical No : 5</h1>
+    <br>
+    <p style="text-align: center; font-size: 20px; font-weight:400 ;"><span style="font-weight: 700;">Aim :
+        </span>Interfacing Raspberry pi with RFID.</p>
+    <br>
+    <table id="customers">
+        <tr>
+            <th>RFID Reader Board Pin</th>
+            <th>Physical pin</th>
+            <th>GPIO Pin</th>
+        </tr>
+        <tr>
+            <td>SDA</td>
+            <td>24</td>
+            <td>GPIO8 (SPI_CE0_N)</td>
+
+        </tr>
+        <tr>
+            <td>SCK </td>
+            <td>23 </td>
+            <td>GPIO11 (SPI0-_CLK)</td>
+
+        </tr>
+        <tr>
+            <td>MOSI </td>
+            <td>19 GPIO10 (SPI0_MOSI)</td>
+            <td>GPIO10 (SPI0_MOSI)</td>
+
+        </tr>
+        <tr>
+            <td>MISO </td>
+            <td>21</td>
+            <td>GPIO9 (SPI0_MISO)</td>
+        </tr>
+        <tr>
+            <td>IRQ UNUSED</td>
+            <td>UNUSED</td>
+            <td>UNUSED</td>
+        </tr>
+        <tr>
+            <td>GND </td>
+            <td>6 </td>
+            <td>GND</td>
+        </tr>
+        <tr>
+            <td>RST</td>
+            <td>22</td>
+            <td> GPIO25 (GPIO_GEN6)</td>
+        </tr>
+        <tr>
+            <td>3.3V </td>
+            <td>1</td>
+            <td>3.3V PWR</td>
+        </tr>
+    </table>
+    <p style="text-align: center;">
+        <img src="WhatsApp Image 2023-12-09 at 18.31.59_8e73d1df.jpg" height="400px width400px" alt="">
+    </p>
+    <div class="text-boxes">
+        <div class="text-box HTMLBox">
+            <div class="topic">1. Python script to write RFID (Write.py)</div>
+            <textarea id="HTMLBox" readonly>
+                Import RPi.GPIO as GPIO
+                from mfrc522 import SimpleMFRC522
+                reader= SimpleMFRC522()
+                try:
+                 text = input('New data:')
+                 print("Now place your tag to write")
+                 reader.write(text)
+                 print("Written")
+                finally:
+                 GPIO.cleanup()
+                </textarea>
+            <button id="HTMLButton">Copy Codes</button>
+        </div>
+    </div>
+    <p style="text-align: center;margin: 30px 0px;">
+        • Save the above script as Write.py . <br>
+        • Click on Build tab and compile the program. <br>
+        • After successful compilation, again click on Build and execute the program. <br>
+        • Enter a name for your tag (eg. New Data: RFID Demo). <br>
+        • Press enter (jot down what you have written.). <br>
+        • Place the tag near the RFID reader wait for message written. <br>
+        • Your RFID is written successfully with New Data. <br>
+        • Now create a new python file and type the code to read RFID.
+    </p>
+    <div class="text-boxes">
+        <div class="text-box HTMLBox">
+            <div class="topic">2. Python script to read RFID (Read.py)
+            </div>
+            <textarea id="HTMLBox" readonly>
+                import RPi.GPIO as GPIO
+                from mfrc522 import SimpleMFRC522
+                reader = SimpleMFRC522()
+                try:
+                id, text = reader.read()
+                print(id)
+                print(text)
+                finally:
+                GPIO.cleanup()
+                </textarea>
+            <button id="HTMLButton">Copy Codes</button>
+        </div>
+    </div>
+    
+    <p style="text-align: center;margin: 30px 0px;">
+        • Save the above script as Read.py <br>
+        • Click on Build tab and compile the program. <br>
+        • After successful compilation, again click on Build and execute the program. <br>
+        • Place the tag near the RFID reader wait for the RFID to read it. <br>
+    </p>
+    <br>
+    <h3 style="text-align: center; ">Software Setup:</h3>
+    <p style="text-align: center;margin: 30px 0px;">
+        • Open Terminal and type the following commands <br>
+        ➢ sudo apt-get update <br>
+        ➢ sudo apt-get upgrade <br><br>
+        • Create a new folder named 4digitTime using following command <br>
+        ➢ mkdir 4digitTme <br><br>
+        • Open the folder using following command <br>
+        ➢ cd 4digitTme <br><br>
+        • To see the complete path of the folder type following command <br>
+        ➢ pwd <br><br>
+        • Download the python script tm1637.py using following command under
+        4digitTime folder <br>
+        ➢ wget https:raspberrytips.nl/files/tm1637.py <br><br>
+        • You can check the list of available files in your folder using following command <br>
+        ➢ ls
+    </p>
+
+
+    <script>
+        // HTML BOx JS Code
+        let HTMLBox = document.getElementById("HTMLBox");
+        let HTMLButton = document.getElementById("HTMLButton");
+
+        HTMLButton.onclick = function () {
+            HTMLBox.select();
+            document.execCommand("copy");
+            HTMLButton.innerText = "Codes Copied";
+        };
+
+        // CSS Box Js Code
+        let CSSBox = document.getElementById("CSSBox");
+        let CSSButton = document.getElementById("CSSButton");
+
+        CSSButton.onclick = function () {
+            CSSBox.select();
+            document.execCommand("copy");
+            CSSButton.innerText = "Codes Copied";
+        };
+        // JavaScript BOx JS Code
+        let JSBox = document.getElementById("JSBox");
+        let JSButton = document.getElementById("JSButton");
+
+        JSButton.onclick = function () {
+            JSBox.select();
+            document.execCommand("copy");
+            JSButton.innerText = "Codes Copied";
+        };
+    </script>
+</body>
+
+</html>
