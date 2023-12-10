@@ -68,6 +68,21 @@
     <p style="text-align: center;">
         <img src="WhatsApp Image 2023-12-09 at 18.31.59_8e73d1df.jpg" height="400px width400px" alt="">
     </p>
+    <br>
+    <h3 style="text-align: center; ">Software Setup:</h3>
+    <p style="text-align: center;margin: 30px 0px;">
+        • Open Terminal and type the following commands <br>
+        ➢ sudo apt-get update <br>
+        ➢ sudo apt-get upgrade <br>
+        ➢ sudo raspi-config ➔ Interfacing option➔ SPI➔ Enable ➔ Finish <br>
+        ➢ sudo reboot <br>
+        ➢ lsmod | grep spi <br>
+        ➢ sudo apt-get install python3-dev python3-pip <br>
+        ➢ sudo pip3 install spidev <br>
+        ➢ sudo pip3 install mfrc522 <br>
+    </p>
+
+
     <div class="text-boxes">
         <div class="text-box HTMLBox">
             <div class="topic">1. Python script to write RFID (Write.py)</div>
@@ -86,6 +101,7 @@
             <button id="HTMLButton">Copy Codes</button>
         </div>
     </div>
+    <br>
     <p style="text-align: center;margin: 30px 0px;">
         • Save the above script as Write.py . <br>
         • Click on Build tab and compile the program. <br>
@@ -114,33 +130,13 @@
             <button id="HTMLButton">Copy Codes</button>
         </div>
     </div>
-    
+    <br>
     <p style="text-align: center;margin: 30px 0px;">
         • Save the above script as Read.py <br>
         • Click on Build tab and compile the program. <br>
         • After successful compilation, again click on Build and execute the program. <br>
         • Place the tag near the RFID reader wait for the RFID to read it. <br>
     </p>
-    <br>
-    <h3 style="text-align: center; ">Software Setup:</h3>
-    <p style="text-align: center;margin: 30px 0px;">
-        • Open Terminal and type the following commands <br>
-        ➢ sudo apt-get update <br>
-        ➢ sudo apt-get upgrade <br><br>
-        • Create a new folder named 4digitTime using following command <br>
-        ➢ mkdir 4digitTme <br><br>
-        • Open the folder using following command <br>
-        ➢ cd 4digitTme <br><br>
-        • To see the complete path of the folder type following command <br>
-        ➢ pwd <br><br>
-        • Download the python script tm1637.py using following command under
-        4digitTime folder <br>
-        ➢ wget https:raspberrytips.nl/files/tm1637.py <br><br>
-        • You can check the list of available files in your folder using following command <br>
-        ➢ ls
-    </p>
-
-
     <script>
         // HTML BOx JS Code
         let HTMLBox = document.getElementById("HTMLBox");

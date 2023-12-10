@@ -50,36 +50,45 @@
     <p style="text-align: center;">
         <img src="WhatsApp Image 2023-12-09 at 18.31.59_8e73d1df.jpg" height="400px width400px" alt="">
     </p>
+    <p style="text-align: center;">
+        <img src="Screenshot 2023-12-10 150453.png" width="400px" alt="">
+    </p>
     <div class="text-boxes">
         <div class="text-box HTMLBox">
             <div class="topic">Python code-1:</div>
             <textarea id="HTMLBox" readonly>
                 import time
-                Internet Of ThingsB.sc.IT SEM -V
                 import RPi.GPIO as GPIO
                 GPIO.setwarnings(False)
                 GPIO.setmode(GPIO.BOARD)
+
                 led1= 7
                 led2= 29
                 led3= 31
                 led4= 33
+
                 GPIO.setup((led1),GPIO.OUT)
                 GPIO.setup((led2),GPIO.OUT)
                 GPIO.setup((led3),GPIO.OUT)
                 GPIO.setup((led4),GPIO.OUT)
+
                 def pattern():
                 GPIO.output(led1,True)
                 time.sleep(1)
                 GPIO.output(led1,False)
+
                 GPIO.output(led2,True)
                 time.sleep(1)
                 GPIO.output(led2,False)
+
                 GPIO.output(led3,True)
                 time.sleep(1)
                 GPIO.output(led3,False)
+
                 GPIO.output(led4,True)
                 time.sleep(1)
                 GPIO.output(led4,False)
+
                 print('Blinking LED pattern')
                 while True:
                 pattern()
@@ -97,7 +106,6 @@
                 GPIO.setwarnings(False)
                 GPIO.setup(7,GPIO.OUT)
 
-                Internet Of ThingsB.sc.IT SEM -V
                 GPIO.setup(29,GPIO.OUT)
                 GPIO.setup(31,GPIO.OUT)
                 GPIO.setup(33,GPIO.OUT)

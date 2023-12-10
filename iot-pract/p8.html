@@ -19,37 +19,6 @@
         <p style="text-align: center;">
             <img src="WhatsApp Image 2023-12-09 at 18.31.59_8e73d1df.jpg" height="400px width400px" alt="">
         </p>
-    <div class="text-boxes">
-        <div class="text-box HTMLBox">
-            <div class="topic">A. For capturing image:</div>
-            <textarea id="HTMLBox" readonly>
-                import time
-                from picamera import PiCamera
-                camera = PiCamera()
-                camera.resolution = (1280,720)
-                camera.start_preview()
-                time.sleep(5)
-                camera.capture('/home/pi/Desktop/img.jpg')
-                camera.stop_preview()
-                </textarea>
-            <button id="HTMLButton">Copy Codes</button>
-        </div>
-        <div class="text-boxes">
-            <div class="text-box HTMLBox">
-                <div class="topic">B. For capturing video:</div>
-                <textarea id="HTMLBox" readonly>
-                import time
-                from picamera import PiCamera
-                camera = PiCamera()
-                camera.start_preview()
-                camera.start_recording('/home/pi/Desktop/video.h264')
-                camera.wait_recording(10)
-                camera.stop_recording()
-                print("Finished Recording")
-                </textarea>
-                <button id="HTMLButton">Copy Codes</button>
-            </div>
-        </div>
         <br>
         <h3 style="text-align: center; ">Software Setup:</h3>
         <p style="text-align: center;margin: 30px 0px;">
@@ -68,7 +37,40 @@
             ➢ sudo reboot <br>
         </p>
 
+    <div class="text-boxes">
+        <div class="text-box HTMLBox">
+            <div class="topic">A. For capturing image:</div>
+            <textarea id="HTMLBox" readonly>
+                import time
+                from picamera import PiCamera
 
+                camera = PiCamera()
+                camera.resolution = (1280,720)
+                camera.start_preview()
+                time.sleep(5)
+                camera.capture('/home/pi/Desktop/img.jpg')
+                camera.stop_preview()
+                </textarea>
+            <button id="HTMLButton">Copy Codes</button>
+        </div>
+        <br>
+        <div class="text-boxes">
+            <div class="text-box HTMLBox">
+                <div class="topic">B. For capturing video:</div>
+                <textarea id="HTMLBox" readonly>
+                import time
+                from picamera import PiCamera
+
+                camera = PiCamera()
+                camera.start_preview()
+                camera.start_recording('/home/pi/Desktop/video.h264')
+                camera.wait_recording(10)
+                camera.stop_recording()
+                print("Finished Recording")
+                </textarea>
+                <button id="HTMLButton">Copy Codes</button>
+            </div>
+        </div>
         <script>
             // HTML BOx JS Code
             let HTMLBox = document.getElementById("HTMLBox");
