@@ -7,7 +7,10 @@
   font-family: "poppins", sans-serif;
 
 }
-
+img{
+  height:400px;
+  width:400px;
+}
 body {
   min-height: 100%;
   width: 100%;
@@ -109,9 +112,4 @@ img{
     height: 220px;
   }
 }
-@media (max-width: 480px) {
 
-  img{
-    height: 190px;
-  }
-}
