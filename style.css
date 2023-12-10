@@ -7,7 +7,10 @@
   font-family: "poppins", sans-serif;
 
 }
-
+img{
+  height:400px;
+  width:400px;
+}
 body {
   min-height: 100%;
   width: 100%;
@@ -103,4 +106,8 @@ li a::before{
     grid-template-columns: repeat(1, 1fr);
     margin: 50px 50px;
   }
+  img{
+  height:200px;
+  width:200px;
+}
 }
